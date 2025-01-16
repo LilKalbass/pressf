@@ -1,0 +1,72 @@
+.disconnect-wallet {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: medium;
+  cursor: pointer;
+  background: red;
+  color: rgb(255, 255, 255);
+}
+
+.main {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+
+.icon-cantainer {
+  width: 80%;
+  margin-top: 1rem;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.icon {
+  background: rgb(57, 4, 93);
+  background: linear-gradient(
+    0deg,
+    rgb(62, 1, 91) 0%,
+    rgba(186, 99, 247, 1) 100%
+  );
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.7rem;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.icon:hover {
+  background: hsla(197, 100%, 63%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(197, 100%, 63%, 1) 0%,
+    hsla(294, 100%, 55%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(197, 100%, 63%, 1) 0%,
+    hsla(294, 100%, 55%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(197, 100%, 63%, 1) 0%,
+    hsla(294, 100%, 55%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#40C9FF", endColorstr="#E81CFF", GradientType=1 );
+}
+
+.icon img {
+  height: 30px;
+  width: 30px;
+}

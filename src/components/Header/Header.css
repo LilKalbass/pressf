@@ -1,0 +1,19 @@
+.header {
+  width: calc(100% - 32px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+.wallet-name {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: -1;
+}
+
+.username {
+  font-weight: bold;
+}

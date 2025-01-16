@@ -52,11 +52,6 @@ function App() {
         }
     }
 
-    const formatAddress = (address: string) => {
-        // @ts-ignore
-        const tempAddress = address.parse(address).toString()
-        return `${tempAddress.slice(0, 4)}...${tempAddress.slice(-4)}`
-    }
 
     if (isLoading) {
         return (
@@ -73,7 +68,7 @@ function App() {
             {tonWalletAddress ? (
                 <div className='flex flex-col items-center gap-y-4'>
                     <p>
-                        Connected: {formatAddress(tonWalletAddress)}
+                        Connected: {tonWalletAddress}
                     </p>
                     <button onClick={handleWalletAction} className='bg-yellow-500 hover:bg-yellow-200 py-2 px-4 rounded-3xl'>
                         Disconnect

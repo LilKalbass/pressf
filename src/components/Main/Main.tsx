@@ -39,7 +39,7 @@ const Main = () => {
       {address ? (
         <>
           <button className="disconnect-wallet" onClick={onDisconnect}>
-            Disconnect wallet
+            Disconnect
           </button>
           <div className="icon-cantainer">
             {Array.from({ length: 5 }, (_, index) => (

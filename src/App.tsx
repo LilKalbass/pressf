@@ -1,57 +1,47 @@
-import React from "react";
-import "./App.css";
-import {useTonConnectUI} from "@tonconnect/ui-react";
-import {useCallback, useState, useEffect} from "react";
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useTonConnectUI } from '@tonconnect/ui-react';
+import { connectWallet, disconnectWallet, setLoading } from './redux/walletSlice';
+import './App.css';
 
 function App() {
-    const [tonConnectUI] = useTonConnectUI()
-    const [tonWalletAddress, setTonWalletAddress] = useState<string | null>(null)
-    const [isLoading,setIsLoading] = useState(true)
-
-    const handleWalletConnection = useCallback((address:string) => {
-        setTonWalletAddress(address)
-        console.log("suckssfully")
-        setIsLoading(false)
-    }, [])
-    const handleWalletDisconnect = useCallback(() => {
-        setTonWalletAddress(null)
-        console.log("sucks")
-        setIsLoading(false)
-    }, [])
+    const dispatch = useDispatch();
+    // @ts-ignore
+    const { address, isLoading } = useSelector((state) => state.wallet);
+    const [tonConnectUI] = useTonConnectUI();
 
     useEffect(() => {
         const checkConnection = async () => {
+            dispatch(setLoading(true));
             if (tonConnectUI.account?.address) {
-                handleWalletConnection(tonConnectUI.account?.address)
+                dispatch(connectWallet(tonConnectUI.account.address));
             } else {
-                handleWalletDisconnect()
+                dispatch(disconnectWallet());
             }
-        }
-        checkConnection()
+        };
+
+        checkConnection();
 
         const unsub = tonConnectUI.onStatusChange((wallet) => {
-            if (wallet) {
-                handleWalletConnection(wallet.account.address)
+            if (wallet?.account?.address) {
+                dispatch(connectWallet(wallet.account.address));
             } else {
-                handleWalletDisconnect()
+                dispatch(disconnectWallet());
             }
-        })
+        });
 
-        return () => {
-            unsub()
-        }
 
-    }, [tonConnectUI, handleWalletConnection, handleWalletDisconnect]);
+        return () => unsub();
+    }, [tonConnectUI, dispatch]);
 
     const handleWalletAction = async () => {
+        dispatch(setLoading(true));
         if (tonConnectUI.connected) {
-            setIsLoading(true)
-            await tonConnectUI.disconnect()
+            await tonConnectUI.disconnect();
         } else {
-            await tonConnectUI.openModal()
+            await tonConnectUI.openModal();
         }
-    }
-
+    };
 
     if (isLoading) {
         return (
@@ -60,16 +50,15 @@ function App() {
                     Loading...
                 </div>
             </main>
-        )
+        );
     }
-  return (
+
+    return (
         <main className='flex min-h-screen flex-col items-center justify-center'>
             <h1 className='text-4xl mb-6'>TestAssigmentJS</h1>
-            {tonWalletAddress ? (
+            {address ? (
                 <div className='flex flex-col items-center gap-y-4'>
-                    <p>
-                        Connected: {tonWalletAddress}
-                    </p>
+                    <p>Connected: {address}</p>
                     <button onClick={handleWalletAction} className='bg-yellow-500 hover:bg-yellow-200 py-2 px-4 rounded-3xl'>
                         Disconnect
                     </button>
@@ -80,7 +69,7 @@ function App() {
                 </button>
             )}
         </main>
-  );
+    );
 }
 
 export default App;

@@ -5,7 +5,7 @@ import { connectWallet, disconnectWallet, setLoading } from "../redux/walletSlic
 
 export const formatAddress = (address: string) => {
     // Break address into two parts for display
-    const firstPart = address.slice(0, Math.ceil(address.length / 2));
+    const firstPart = address.slice(2, Math.ceil(address.length / 2));
     const secondPart = address.slice(Math.ceil(address.length / 2));
     return `${firstPart}\n${secondPart}`;
 };

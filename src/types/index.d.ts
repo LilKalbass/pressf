@@ -1,8 +1,8 @@
-// export {};
-// declare global {
-//     interface Window {
-//         Telegram: {
-//             WebApp: any;
-//         };
-//     }
-// }
+export {};
+declare global {
+    interface Window {
+        Telegram: {
+            WebApp: any;
+        };
+    }
+}

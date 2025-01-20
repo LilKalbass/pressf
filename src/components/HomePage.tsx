@@ -1,16 +1,15 @@
 import React from "react";
-import {useDispatch} from "react-redux";
 import { useSelector } from "react-redux";
 import {formatAddress } from "./Wallet";
 import {useWebApp} from "../hooks/useWebApp";
 export const HomePage = () => {
-    const dispatch = useDispatch();
     // @ts-ignore
     const { address } = useSelector((state) => state.wallet);
-    // const { user} = useWebApp();
+    const { user, onClose} = useWebApp();
 
     return (
         <main className='flex min-h-[80vh] flex-col items-center justify-center'>
+            <button onClick={onClose}>Cancel</button>
             <h1 className='text-4xl mb-6'>TestAssigmentJS</h1>
             <p className='text-lg'>Connect ur wallet to get started!</p>
             <div className='mt-8'>

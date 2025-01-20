@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="com.obiscr.chatgpt.settings.EasyCodeState">
+    <option name="projectFiles" value="$PROJECT_DIR$/public/index.html;C:/Users/Artem/Desktop/wallet-bot/public/manifest.json;C:/Users/Artem/Desktop/wallet-bot/src/redux/store.js;C:/Users/Artem/Desktop/wallet-bot/src/redux/walletSlice.js;C:/Users/Artem/Desktop/wallet-bot/src/App.css;C:/Users/Artem/Desktop/wallet-bot/src/App.tsx;C:/Users/Artem/Desktop/wallet-bot/src/index.tsx;C:/Users/Artem/Desktop/wallet-bot/package-lock.json;C:/Users/Artem/Desktop/wallet-bot/package.json;C:/Users/Artem/Desktop/wallet-bot/README.md;C:/Users/Artem/Desktop/wallet-bot/tailwind.config.js;C:/Users/Artem/Desktop/wallet-bot/tsconfig.json" />
+  </component>
+</project>

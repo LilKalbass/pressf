@@ -8,7 +8,7 @@ export const HomePage = () => {
     const { user} = useWebApp();
 
     return (
-        <main className='flex min-h-[80vh] flex-col items-center justify-center max-w-[420px]'>
+        <main className='flex min-h-[80vh] flex-col items-center justify-center '>
             <h1 className='text-4xl mb-6'>TestAssigmentJS</h1>
             <p className='text-lg'>Connect ur wallet to get started!</p>
             <div className='mt-8 max-w-[320px] flex-wrap justify-center'>
@@ -21,10 +21,10 @@ export const HomePage = () => {
                         `Proceed to "Wallet" page`
                     )}
                 </p>
-                <p>
+                <p className='flex flex-col'>
                     TONWalletAddress:
                     {address ? (
-                        <span className="ml-0.5 font-mono text-blue-500">{formatAddress(address)}</span>
+                        <span className="ml-0.5 font-mono text-blue-500 text-[12px]">{formatAddress(address)}</span>
                     ) : (
                         `Proceed to "Wallet" page`
                     )}

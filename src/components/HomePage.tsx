@@ -8,7 +8,7 @@ export const HomePage = () => {
     const { user} = useWebApp();
 
     return (
-        <main className='flex min-h-[80vh] flex-col items-center justify-center'>
+        <main className='flex min-h-[80vh] flex-col items-center justify-center max-w-screen-sm'>
             <h1 className='text-4xl mb-6'>TestAssigmentJS</h1>
             <p className='text-lg'>Connect ur wallet to get started!</p>
             <div className='mt-8'>

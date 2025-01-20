@@ -11,7 +11,7 @@ export const HomePage = () => {
         <main className='flex min-h-[80vh] flex-col items-center justify-center '>
             <h1 className='text-4xl mb-6'>TestAssigmentJS</h1>
             <p className='text-lg'>Connect ur wallet to get started!</p>
-            <div className='mt-8 max-w-[320px] flex-wrap justify-center'>
+            <div className='mt-8 max-w-full flex-wrap justify-center'>
                 <h2 className='text-xl text-center'>U may check ur nickname & walletAddress here!</h2>
                 <p>
                     TgNickname:
@@ -24,7 +24,7 @@ export const HomePage = () => {
                 <p className='flex flex-col'>
                     TONWalletAddress:
                     {address ? (
-                        <span className="ml-0.5 font-mono text-blue-500 text-[12px]">{formatAddress(address)}</span>
+                        <span className="ml-0.5 font-mono text-blue-500 text-[12px] whitespace-pre-wrap">{formatAddress(address)}</span>
                     ) : (
                         `Proceed to "Wallet" page`
                     )}

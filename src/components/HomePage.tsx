@@ -11,8 +11,8 @@ export const HomePage = () => {
         <main className='flex min-h-[80vh] flex-col items-center justify-center'>
             <h1 className='text-4xl mb-6'>TestAssigmentJS</h1>
             <p className='text-lg'>Connect ur wallet to get started!</p>
-            <div className='mt-8 max-w-[320px] flex-wrap'>
-                <h2 className='text-xl'>U may check ur nickname & walletAddress here!</h2>
+            <div className='mt-8 max-w-[320px] flex-wrap justify-center'>
+                <h2 className='text-xl text-center'>U may check ur nickname & walletAddress here!</h2>
                 <p>
                     TgNickname:
                     {user ? (

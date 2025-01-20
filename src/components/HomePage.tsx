@@ -7,7 +7,7 @@ export const HomePage = () => {
     const dispatch = useDispatch();
     // @ts-ignore
     const { address } = useSelector((state) => state.wallet);
-    const { user} = useWebApp();
+    // const { user} = useWebApp();
 
     return (
         <main className='flex min-h-[80vh] flex-col items-center justify-center'>

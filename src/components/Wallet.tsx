@@ -4,10 +4,7 @@ import { useTonConnectUI } from '@tonconnect/ui-react';
 import { connectWallet, disconnectWallet, setLoading } from "../redux/walletSlice";
 
 export const formatAddress = (address: string) => {
-    // Break address into two parts for display
-    const firstPart = address.slice(2, Math.ceil(address.length / 2));
-    const secondPart = address.slice(Math.ceil(address.length / 2));
-    return `${firstPart}\n${secondPart}`;
+    return `${address.slice(2, Math.ceil(address.length / 2))}\n${address.slice(Math.ceil(address.length / 2))}`;
 };
 
 

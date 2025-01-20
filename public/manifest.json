@@ -1,5 +1,6 @@
 {
   "name": "Create React App Sample",
   "url": "https://pressfffff.vercel.app/",
-  "iconUrl": "https://pressfffff.vercel.app/q.png"
+  "iconUrl": "https://pressfffff.vercel.app/q.png",
+  "display": "standalone"
 }

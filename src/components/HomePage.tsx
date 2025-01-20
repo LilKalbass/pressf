@@ -5,11 +5,10 @@ import {useWebApp} from "../hooks/useWebApp";
 export const HomePage = () => {
     // @ts-ignore
     const { address } = useSelector((state) => state.wallet);
-    const { user, onClose} = useWebApp();
+    const { user} = useWebApp();
 
     return (
         <main className='flex min-h-[80vh] flex-col items-center justify-center'>
-            <button onClick={onClose}>Cancel</button>
             <h1 className='text-4xl mb-6'>TestAssigmentJS</h1>
             <p className='text-lg'>Connect ur wallet to get started!</p>
             <div className='mt-8'>

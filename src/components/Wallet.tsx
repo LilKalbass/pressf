@@ -68,7 +68,7 @@ export const Wallet = () => {
                     <div className='flex flex-col items-center'>
                         <div className='gap-y-1 flex flex-col'>
                             <h4 className='text-xl'>Connected Address: </h4>
-                            <p className='mb-4 text-[12px]'>{formatAddress(address)}</p>
+                            <p className='mb-4 whitespace-pre-wrap'>{formatAddress(address)}</p>
                         </div>
                         <button onClick={handleWalletAction}
                                 className='bg-red-500 hover:bg-red-200 py-2 px-4 rounded-3xl duration-300 transition-all'>

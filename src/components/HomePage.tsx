@@ -24,7 +24,7 @@ export const HomePage = () => {
                 <p className='flex flex-col'>
                     TONWalletAddress:
                     {address ? (
-                        <span className="ml-0.5 font-mono text-blue-500 text-[12px] whitespace-pre-wrap">{formatAddress(address)}</span>
+                        <span className="ml-0.5 font-mono text-blue-500 whitespace-pre-wrap">{formatAddress(address)}</span>
                     ) : (
                         `Proceed to "Wallet" page`
                     )}
